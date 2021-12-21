@@ -1,19 +1,37 @@
 body {
-    background: gray;
+    background: #f7f7f7;
+}
+
+.photo {
+    border: 1px solid #505050;
+    border-radius: 50%;
+    /*If was square picture will be a circle*/
 }
 
 #title, .subtitle, .post_title {
-    color: blue;
+    color: #505050;
 }
 
 .post_title {
     font-size: 16px;
     font-style: italic;
+    margin: 0;
+    margin-bottom: 15px;
 }
 
 .post {
     background: white;
     padding: 15px;
-    border: 3px solid black;
-    margin: 0px 0px 15px 0px ;
+    border: 3px solid #505050;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.pos_content {
+    margin: 0px;
+    margin-bottom: 15px;
+}
+
+.post_image {
+    margin-bottom: 15px;
 }
