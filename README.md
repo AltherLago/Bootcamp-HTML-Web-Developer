@@ -8,6 +8,6 @@
 
 <br>
 
-## Remake Instagram´s initial page
+## Remake Instagram’s initial page
 
-<img src="https://github.com/AltherLago/Bootcamp-HTML-Web-Developer/tree/main/remake-initial-page-insta/remake.png" width=80% />
+<img title="picture Instagram’s initial page" alt="Instagram´s initial page" src="/remake-initial-page-insta/remake.png">
