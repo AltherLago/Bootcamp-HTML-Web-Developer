@@ -10,4 +10,4 @@
 
 ## Remake Instagram´s initial page
 
-<img src="https://github.com/AltherLago/Bootcamp-HTML-Web-Developer/tree/main/remake-initial-page-insta/remake.png">
+<img src="https://github.com/AltherLago/Bootcamp-HTML-Web-Developer/tree/main/remake-initial-page-insta/remake.png" />
