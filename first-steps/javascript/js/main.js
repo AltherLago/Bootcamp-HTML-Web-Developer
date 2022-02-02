@@ -91,10 +91,32 @@ console.log(validaIdade(idade));
 
 // class 5
 
-function botão(){
-    document.getElementById("Agradecimento");
-    console.log(document.getElementById("Agradecimento"));
+function clicou(){
+    document.getElementById("agradecimento").innerHTML = "<b>Obrigado por clicar</b>";
+    console.log(document.getElementById("agradecimento"));
     //alert("Obrigado por clicar");
 }
 
+function redirecionar() {
+    window.open("https://globallabs.academy"); // new tab
+   // window.location.href("https:globallabs.academy"); // same tab
+}
 
+function trocar(elemento) {
+    // alert("Atenção");
+    // document.getElementById("mousemove").innerHTML = "Obrigado por passar o mouse";
+    elemento.innerHTML = "Obrigado por passar o mouse";
+}
+
+function voltar(elemento) {
+    // document.getElementById("mousemove").innerHTML = "Passe o mouse aqui";
+    elemento.innerHTML = "Passe o mouse aqui"
+}
+
+function load() {
+    alert("Carregada");
+}
+
+function funcaoChange(elemento) {
+    console.log(elemento.value);
+}

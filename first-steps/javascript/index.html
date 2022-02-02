@@ -5,9 +5,19 @@
             <meta charset="utf-8">
             <script type="text/javascript" src="js/main.js"></script>
         </head>
-        <body>
-            <button type="button" onclick="botão()">Click aqui</button>
-            <h3 id="agradecimento"></h3>
+        <body onload="load()">
+            <button type="button" onclick="clicou()">Click aqui</button>
+            <p id="agradecimento" onclick="redirecionar()"></p>
+            <!-- <p id="mousemove" onmouseover="trocar()" onmouseout="voltar()">Passe o mouse aqui</p> -->
+            <p onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+            <p onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+            <p onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+        
+            <select onchange="funcaoChange(this)">
+                <option value="1">Valor 1</option>
+                <option value="2">Valor 2</option>
+                <option value="3">Valor 3</option>
+            </select>
         </body>
     </html>
     
