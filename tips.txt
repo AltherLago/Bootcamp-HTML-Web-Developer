@@ -2,3 +2,7 @@ VSCode
 
 	- Live server
 	- Autorename
+
+Imagens   de filmes e series
+	
+	- https://www.themoviedb.org/
