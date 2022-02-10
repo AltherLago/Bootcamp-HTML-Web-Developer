@@ -8,6 +8,10 @@
 
 <br>
 
-## Remake Instagram’s initial page
+## Remake Instagram's initial page
 
 <img title="picture Instagram’s initial page" alt="Instagram´s initial page" src="/instagram-remake/remake.png">
+
+## Remake Netflix
+
+<img title="Epicflix" alt="Epicflix.gif" src="/netflix-remake/Epicflix‑Made-with-FlexClip.gif">
