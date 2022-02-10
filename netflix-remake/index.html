@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./style/main.css">
-<title>Netflix Remake</title>
-<script src="https://kit.fontawesome.com/5b6ed5b630.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/main.css">
+   
+    <title>Netflix Remake</title>
+    
+    <script src="https://kit.fontawesome.com/5b6ed5b630.js" crossorigin="anonymous"></script>
+
+    <!--owl css-->
+    <link rel="stylesheet" href="./style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="./style/owl/owl.theme.default.min.css">
+    ">
 </head>
 <body>
     <header>
@@ -14,7 +21,6 @@
             <nav>
                 <a href="#">Start</a>
                 <a href="#">My Stuff</a>
-                <!--todo: put the magnifier-->
                 <i class="fa-solid fa-magnifying-glass"></i>
             </nav>
         </div>
@@ -42,5 +48,45 @@
             </div>
         </div>
     </main>
+
+    <div class="carousel-movies">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img box-movie src="img/eragon.png" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img box-movie src="img/hp1.png" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img box-movie src="img/lk1.png" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img box-movie src="img/hp2.png" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img box-movie src="img/lk2.png" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img box-movie src="img/hp3.png" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img box-movie src="img/lk3.png" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img box-movie src="img/hp4.png" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img box-movie src="img/hobbit.png" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img box-movie src="img/hp5.png" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+
+    <!--owl -> JQueryj-->
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/owl/setup.js"></script>
 </body>
 </html>
