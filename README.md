@@ -4,8 +4,7 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/AltherLago/Bootcamp-HTML-Web-Developer)
 
-- O bootcamp tem como objetivo desenvolver websites utilizando HTML, CSS e JavaScript para iniciar minha trajetória profissional em desenvolvimento web front-end.
-
+- The bootcamp aims to develop websites using HTML, CSS and JavaScript to start my professional trajectory in front-end web development. 
 <br>
 
 ## Remake Instagram's initial page
