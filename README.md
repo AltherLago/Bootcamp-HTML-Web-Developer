@@ -10,4 +10,4 @@
 
 ## Remake Instagram’s initial page
 
-<img title="picture Instagram’s initial page" alt="Instagram´s initial page" src="/remake-initial-page-insta/remake.png">
+<img title="picture Instagram’s initial page" alt="Instagram´s initial page" src="/instagram-remake/remake.png">
