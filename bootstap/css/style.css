@@ -1,3 +1,8 @@
+body{
+    font: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .navbar{
     background-color: rgb(76, 187, 42);
 }
@@ -7,5 +12,5 @@
 }
 
 .margin{
-    padding-top: 50px;
+    padding: 50px;
 }
