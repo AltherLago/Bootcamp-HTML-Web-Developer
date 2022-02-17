@@ -8,6 +8,11 @@ snake[0] = {
 }
 let direction = "right";
 
+let food = {
+    x: Math.floor(Math.random() * 15 + 1) * box,
+    y: Math.floor(Math.random() * 15 + 1) * box
+}
+
 function createBG(){
     context.fillStyle = "lightgreen";
     // DOM to get window coordinates of: Upper-left
@@ -19,6 +24,11 @@ function createSnake(){
         context.fillStyle = "green";
         context.fillRect(snake[i].x, snake[i].y, box, box);
     }
+}
+
+function createFood(){
+    context.fillStyle = "red";
+    context.fillRect(food.x, food.y, box, box);
 }
 
 document.addEventListener('keydown', update);
@@ -39,6 +49,7 @@ function startGame(){
     
     createBG();
     createSnake();
+    createFood(); 
     
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
