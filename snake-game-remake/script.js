@@ -17,25 +17,37 @@ let snake = [
     {x: 6 * box, y: 8 * box}
 ]
 
-// start game
+// Horizontal deslocation
+let dx = box;
+// Vertical deslocation
+let dy = 0;
+
+// Start game
 main();
 
-// main function called repeatedly to keep the game running
+// Main function called repeatedly to keep the game running
 function main(){
-    makeCanvas();
-    makeSnake();
+    setTimeout(function onTick(){
+        makeCanvas();
+        makeSnake();
+        moveSnake();
+        console.log(snake);
+        // Call main again
+        main();
+    }, 3000)
+    
 }
 
-// draw canvas
+// Draw canvas
 function makeCanvas(){
     //  Select the color to fill the drawing
     snakeBoardCtx.fillStyle = "purple"; 
     snakeBoardCtx.fillRect(0, 0, 16 * box, 16 * box);
 }
 
-// draw snake on the canvas
+// Draw snake on the canvas
 function makeSnake(){
-    // draw each part
+    // Draw each part
     for(var i = 0; i < snake.length; i++){
         // Set the colour of the snake par
         snakeBoardCtx.fillStyle = "lightgreen";
@@ -48,3 +60,17 @@ function makeSnake(){
         snakeBoardCtx.strokeRect(snake[i].x, snake[i].y, box, box);
     }
 }
+
+function moveSnake(){
+    // Crate´s the new Snake´s head
+    const head = {
+        x: snake[0].x + dx,
+        y: snake[0].y + dy
+    }
+    // Add the new head to beging of snake body
+    snake.unshift(head);
+    snake.pop();
+
+}
+
+
