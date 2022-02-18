@@ -59,7 +59,7 @@ function startGame(){
     createSnake();
     createFood(); 
    
-    // stote position
+    // stop position
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
 
