@@ -17,6 +17,8 @@ let snake = [
     {x: 6 * box, y: 8 * box}
 ]
 
+// True if change direction
+let changingDirection = false;
 // Horizontal deslocation
 let dx = box;
 // Vertical deslocation
@@ -27,6 +29,7 @@ main();
 
 // Main function called repeatedly to keep the game running
 function main(){
+    changingDirection = false;
     setTimeout(function onTick(){
         makeCanvas();
         makeSnake();
@@ -70,7 +73,48 @@ function moveSnake(){
     // Add the new head to beging of snake body
     snake.unshift(head);
     snake.pop();
-
 }
+
+document.addEventListener('keydown', changeDirection);
+
+function changeDirection(event){
+    if(changingDirection) return;
+    // For take just first key pressed
+    changeDirection = true;
+    
+    const leftKey = 37;
+    const rightKey = 39;
+    const upKey = 38;
+    const downKey = 40;
+
+    
+    // Prevent the snake from reversing
+    const keyPressed = event.keyCode;
+    const goingRigth = dx === box;
+    const goingLeft = dx === -box;
+    const goingUp = dy === -box;
+    const goingDown = dy === box;
+
+    
+    if(keyPressed == leftKey && !goingRigth){
+        dx = -box;
+        dy = 0;
+    }
+    if(keyPressed == rightKey && !goingLeft){
+        dx = box;
+        dy = 0;
+    }
+    if(keyPressed == upKey && !goingDown){
+        dx = 0;
+        dy = -box;
+    }
+    if(keyPressed == downKey && !goingUp){
+        dx = 0;
+        dy = box;
+    }
+}
+
+
+
 
 
