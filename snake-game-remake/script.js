@@ -24,6 +24,13 @@ let dx = box;
 // Vertical deslocation
 let dy = 0;
 
+let food = {
+    x: Math.floor(Math.random() * 15 + 1) * box,
+    y: Math.floor(Math.random() * 15 + 1) * box
+}
+
+document.addEventListener('keydown', changeDirection);
+
 // Start game
 main();
 
@@ -32,12 +39,14 @@ function main(){
     changingDirection = false;
     setTimeout(function onTick(){
         makeCanvas();
-        makeSnake();
         moveSnake();
+        loopSnakeCanvas();
+        makeSnake();
+        makeFood();
         console.log(snake);
         // Call main again
         main();
-    }, 3000)
+    }, 100)
     
 }
 
@@ -52,7 +61,7 @@ function makeCanvas(){
 function makeSnake(){
     // Draw each part
     for(var i = 0; i < snake.length; i++){
-        // Set the colour of the snake par
+        // Set the colour of the snake part
         snakeBoardCtx.fillStyle = "lightgreen";
         // Set the border colour of the snake part
         snakeBoardCtx.strokestyle = "white";
@@ -72,21 +81,19 @@ function moveSnake(){
     }
     // Add the new head to beging of snake body
     snake.unshift(head);
+
     snake.pop();
 }
 
-document.addEventListener('keydown', changeDirection);
-
 function changeDirection(event){
     if(changingDirection) return;
-    // For take just first key pressed
+    // For take if first key pressed
     changeDirection = true;
     
     const leftKey = 37;
     const rightKey = 39;
     const upKey = 38;
     const downKey = 40;
-
     
     // Prevent the snake from reversing
     const keyPressed = event.keyCode;
@@ -94,7 +101,6 @@ function changeDirection(event){
     const goingLeft = dx === -box;
     const goingUp = dy === -box;
     const goingDown = dy === box;
-
     
     if(keyPressed == leftKey && !goingRigth){
         dx = -box;
@@ -113,6 +119,28 @@ function changeDirection(event){
         dy = box;
     }
 }
+
+// Loop snack board
+function loopSnakeCanvas(){
+    const goingRigth = dx === box;
+    const goingLeft = dx === -box;
+    const goingUp = dy === -box;
+    const goingDown = dy === box;
+    
+    if(snake[0].x > 15 * box && goingRigth) snake[0].x = 0;
+    if(snake[0].x < 0 && goingLeft) snake[0].x = 15 * box;
+    if(snake[0].y < 0 && goingUp) snake[0].y = 15 * box;
+    if(snake[0].y > 15 * box && goingDown) snake[0].y = 0;
+}
+
+function makeFood(){
+    // Set the colour of the food
+    snakeBoardCtx.fillStyle = "#d4d8f9";//"#fed337";
+    // Draw a "filled" rectangle to represent the food
+    snakeBoardCtx.fillRect(food.x, food.y, box, box);
+}
+
+// TODO endGame
 
 
 
