@@ -75,7 +75,7 @@ function startGame(){
     }
     snake.unshift(newHead);
 
-    // end game
+    // growth snake 
     if(snakeX != food.x || snakeY != food.y){
         snake.pop();
     } else{

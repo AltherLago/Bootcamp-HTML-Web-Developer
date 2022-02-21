@@ -36,17 +36,20 @@ main();
 
 // Main function called repeatedly to keep the game running
 function main(){
+
+    if(endGame()) return;
+
     changingDirection = false;
     setTimeout(function onTick(){
         makeCanvas();
         moveSnake();
         loopSnakeCanvas();
+        eatFood();
         makeSnake();
         makeFood();
-        console.log(snake);
-        // Call main again
+        // Repeat 
         main();
-    }, 100)
+    }, 500)
     
 }
 
@@ -73,18 +76,18 @@ function makeSnake(){
     }
 }
 
+// keep moving snake
 function moveSnake(){
-    // Crate´s the new Snake´s head
+    // Crate´s the new snake head
     const head = {
         x: snake[0].x + dx,
         y: snake[0].y + dy
     }
     // Add the new head to beging of snake body
     snake.unshift(head);
-
-    snake.pop();
 }
 
+// Control directions of snake
 function changeDirection(event){
     if(changingDirection) return;
     // For take if first key pressed
@@ -133,6 +136,7 @@ function loopSnakeCanvas(){
     if(snake[0].y > 15 * box && goingDown) snake[0].y = 0;
 }
 
+// Draw food
 function makeFood(){
     // Set the colour of the food
     snakeBoardCtx.fillStyle = "#d4d8f9";//"#fed337";
@@ -140,7 +144,29 @@ function makeFood(){
     snakeBoardCtx.fillRect(food.x, food.y, box, box);
 }
 
-// TODO endGame
+// Eat food
+function eatFood(){
+    var hasEatFood = snake[0].x === food.x && snake[0].y === food.y;
+
+    if(hasEatFood){
+        // Change food position build new random position 
+        food.x = Math.floor(Math.random() * 15 + 1) * box;
+        food.y = Math.floor(Math.random() * 15 + 1) * box;
+    } else{
+        // remove tail
+        snake.pop();
+    }
+}
+
+function endGame(){
+    // Verify colision with yourself
+    for(var i = 1; i < snake.length; i++){
+        colision = snake[0].x === snake[i].x && snake[0].y === snake[i].y;
+        if(colision){
+            return true;
+        }
+    }
+}
 
 
 
