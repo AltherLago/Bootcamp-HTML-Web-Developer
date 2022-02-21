@@ -17,7 +17,7 @@ let snake = [
     {x: 6 * box, y: 8 * box}
 ]
 
-// True if change direction
+// If true change direction
 let changingDirection = false;
 // Horizontal deslocation
 let dx = box;
@@ -28,6 +28,8 @@ let food = {
     x: Math.floor(Math.random() * 15 + 1) * box,
     y: Math.floor(Math.random() * 15 + 1) * box
 }
+
+let score = 0;
 
 document.addEventListener('keydown', changeDirection);
 
@@ -49,14 +51,14 @@ function main(){
         makeFood();
         // Repeat 
         main();
-    }, 500)
+    }, 100)
     
 }
 
 // Draw canvas
 function makeCanvas(){
     //  Select the color to fill the drawing
-    snakeBoardCtx.fillStyle = "purple"; 
+    snakeBoardCtx.fillStyle = "#89107f"; 
     snakeBoardCtx.fillRect(0, 0, 16 * box, 16 * box);
 }
 
@@ -65,9 +67,9 @@ function makeSnake(){
     // Draw each part
     for(var i = 0; i < snake.length; i++){
         // Set the colour of the snake part
-        snakeBoardCtx.fillStyle = "lightgreen";
+        snakeBoardCtx.fillStyle = "#15b774";
         // Set the border colour of the snake part
-        snakeBoardCtx.strokestyle = "white";
+        snakeBoardCtx.strokeStyle = '#5f6e03';
         // Draw a "filled" rectangle to represent the snake part at the coordinates
         // the part is located
         snakeBoardCtx.fillRect(snake[i].x, snake[i].y, box, box);
@@ -139,7 +141,7 @@ function loopSnakeCanvas(){
 // Draw food
 function makeFood(){
     // Set the colour of the food
-    snakeBoardCtx.fillStyle = "#d4d8f9";//"#fed337";
+    snakeBoardCtx.fillStyle = "#dace8c";
     // Draw a "filled" rectangle to represent the food
     snakeBoardCtx.fillRect(food.x, food.y, box, box);
 }
@@ -149,6 +151,9 @@ function eatFood(){
     var hasEatFood = snake[0].x === food.x && snake[0].y === food.y;
 
     if(hasEatFood){
+        score++;
+        // Display score on screen
+        document.getElementById('score').innerHTML = score;
         // Change food position build new random position 
         food.x = Math.floor(Math.random() * 15 + 1) * box;
         food.y = Math.floor(Math.random() * 15 + 1) * box;
@@ -168,6 +173,8 @@ function endGame(){
     }
 }
 
+
+// TODO CSS
 
 
 

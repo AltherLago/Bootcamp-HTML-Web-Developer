@@ -1,0 +1,21 @@
+/*TODO BASICS CENTER AND CHANGE COLORS*/
+body{
+    height: 95vh;
+
+    display: flex;
+    justify-content: center; /* axis x */
+    align-items: center; /* axis y */
+    flex-direction: column;
+    
+    background-color:#895710; /*https://www.color-hex.com/*/
+}
+
+h1{
+    color: #f0f0df;
+    font-family: cursive;
+}
+
+h2{
+    color: #fed337;
+}
+/*TODO BUTTON RESTART GAME*/
