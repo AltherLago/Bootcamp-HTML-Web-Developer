@@ -17,8 +17,6 @@ let snake = [
     {x: 6 * box, y: 8 * box}
 ]
 
-// If true change direction
-let changingDirection = false;
 // Horizontal deslocation
 let dx = box;
 // Vertical deslocation
@@ -31,8 +29,6 @@ let food = {
 
 let score = 0;
 
-document.addEventListener('keydown', changeDirection);
-
 // Start game
 main();
 
@@ -41,7 +37,6 @@ function main(){
 
     if(endGame()) return;
 
-    changingDirection = false;
     setTimeout(function onTick(){
         makeCanvas();
         moveSnake();
@@ -89,12 +84,11 @@ function moveSnake(){
     snake.unshift(head);
 }
 
-// Control directions of snake
+// Get keyboard key typed
+document.addEventListener('keydown', changeDirection);
+
+// If key typed control snake directions 
 function changeDirection(event){
-    if(changingDirection) return;
-    // For take if first key pressed
-    changeDirection = true;
-    
     const leftKey = 37;
     const rightKey = 39;
     const upKey = 38;
@@ -151,7 +145,7 @@ function eatFood(){
     var hasEatFood = snake[0].x === food.x && snake[0].y === food.y;
 
     if(hasEatFood){
-        score++;
+        score += 10;
         // Display score on screen
         document.getElementById('score').innerHTML = score;
         // Change food position build new random position 
@@ -173,8 +167,6 @@ function endGame(){
     }
 }
 
-
-// TODO CSS
 
 
 
