@@ -19,14 +19,14 @@
 
 To this project used:
 
-- [Owl Carousel 2](http://owlcarousel2.github.io/OwlCarousel2/index.html){:target="_blank" rel="noopener"}
+- <a href="http://owlcarousel2.github.io/OwlCarousel2/index.html" target="_blank">Owl Carousel 2</a>
 
 Already included in the project.
 
-## Rmake Snake Game
+## Remake Snake Game
 
 <img title="Snake Game" alt="Snake Geme.gif" src="/snake-game-remake/snakeGame.gif">
 
 Have fun here:
 
-- [Snake Game](https://alther-snake-game.netlify.app/){:target="_blank" rel="noopener"}
+- <a href="https://alther-snake-game.netlify.app/" target="_blank">Snake Game</a>
