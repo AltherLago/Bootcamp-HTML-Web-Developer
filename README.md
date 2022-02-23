@@ -22,3 +22,11 @@ To this project used:
 - [Owl Carousel 2](http://owlcarousel2.github.io/OwlCarousel2/index.html)
 
 Already included in the project.
+
+## Rmake Snake Game
+
+<img title="Snake Game" alt="Snake Geme.gif" src="/snake-game-remake/snakeGame.gif">
+
+Have fun here:
+
+- [Snake Game](https://alther-snake-game.netlify.app/)
