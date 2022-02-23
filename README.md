@@ -25,7 +25,7 @@ Already included in the project.
 
 ## Remake Snake Game
 
-<img title="Snake Game" alt="Snake Geme.gif" src="/snake-game-remake/snakeGame.gif">
+<img title="Snake Game" alt="Snake Geme.gif" width="1366" src="/snake-game-remake/snakeGame.gif">
 
 Have fun here:
 
