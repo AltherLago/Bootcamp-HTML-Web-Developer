@@ -19,7 +19,7 @@
 
 To this project used:
 
-- [Owl Carousel 2](http://owlcarousel2.github.io/OwlCarousel2/index.html) {:target="_blank"}
+- [Owl Carousel 2](http://owlcarousel2.github.io/OwlCarousel2/index.html){:target="_blank" rel="noopener"}
 
 Already included in the project.
 
@@ -29,4 +29,4 @@ Already included in the project.
 
 Have fun here:
 
-- [Snake Game](https://alther-snake-game.netlify.app/) {:target="_blank"}
+- [Snake Game](https://alther-snake-game.netlify.app/){:target="_blank" rel="noopener"}
